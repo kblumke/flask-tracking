@@ -5,18 +5,18 @@
 {{ super() }}
 <form action="/site" method="POST">
 <fieldset>
-    <legend>Add a Site</legend>
+<legend>Add A Site</legend>
     {{ forms.render(site_form) }}
-    <p><input type="Submit" value="Save Site"></p>
+<p><input type="Submit" value="Save Site"></p>
 </fieldset>
 </form>
 
 
 <form action="/visit" method="POST">
 <fieldset>
-    <legend>Add a Visit</legend>
+<legend>Add A Visit</legend>
     {{ forms.render(visit_form) }}
-    <p><input type="Submit" name="Save Visit"></p>
+<p><input type="Submit" value="Save Visit"></p>
 </fieldset>
 </form>
 {% endblock content %}

@@ -5,21 +5,21 @@
 {{ super() }}
 <p>An error occured, please correct any mistakes and try again.</p>
 <ul>
-    {% for field in form if field.errors %}
+{% for field in form if field.errors %}
     <li>{{ field.label }}:
         <ul>
-            {% for error in field.errors %}
+        {% for error in field.errors %}
             <li>{{ error }}</li>
-            {% endfor %}
+        {% endfor %}
         </ul>
     </li>
-    {% endfor %}
+{% endfor %}
 </ul>
 <form method="POST">
-<fieldset>
+    <fieldset>
     <legend>Data</legend>
-    {{ forms.render(form) }}
-    <p><input type="Submit" name="Save Data"></p>
-</fieldset>
+        {{ forms.render(form) }}
+        <p><input type="Submit" value="Save Data"></p>
+    </fieldset>
 </form>
 {% endblock content %}
