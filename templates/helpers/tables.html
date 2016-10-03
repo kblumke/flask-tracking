@@ -3,7 +3,7 @@
     {% set is_header_row = headers and loop.index == 1 %}
     {{ render_header(row) if is_header_row }}
     {% if (not headers and loop.index == 1) or (headers and loop.index == 2) %}
-    <tbody>
+<tbody>
     {% endif %}
     {{ render_row(row) if not is_header_row }}
 {% endfor %}
